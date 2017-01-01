@@ -1,0 +1,179 @@
+<xs:schema   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://plan.example.com"
+             xmlns:pla="http://plan.example.com" xmlns:dp="http://definicjeProwadzacych.example.com" xmlns:cz="http://czas.example.com">
+
+    <xs:import namespace="http://definicjeProwadzacych.example.com" schemaLocation="definicjeProwadzacych.xsd"/>
+
+    <xs:import namespace="http://czas.example.com" schemaLocation="czas.xsd"/>
+
+    <xs:annotation>
+        <xs:documentation xml:lang="pl">
+            Schemat do drugiego zadania laboratoryjnego z Programowania
+            Komunikacji Człowiek-Komputer.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="plany" type="ZbiórPlanówZajęć">
+        <!-- różnica między key a unique!
+                (key tu nie działa, bo stopień może nie występować) -->
+        <xs:unique name="daneProwadzącego">
+            <xs:selector xpath="dp:listaProwadzących/dp:definicjaProwadzącego"/>
+            <xs:field xpath="@identyfikator"/>
+            <xs:field xpath="@stopień"/>
+            <xs:field xpath="@imię"/>
+            <xs:field xpath="@nazwisko"/>
+        </xs:unique>
+        <xs:keyref name="weryfikujDaneProwadzących" refer="daneProwadzącego">
+            <xs:selector xpath="plan/dzień/zajęcia/prowadzący"/>
+            <xs:field xpath="@kto"/>
+            <xs:field xpath="tytuł"/>
+            <xs:field xpath="imię"/>
+            <xs:field xpath="nazwisko"/>
+        </xs:keyref>
+    </xs:element>
+
+    <xs:complexType name="ZbiórPlanówZajęć">
+        <xs:sequence>
+            <xs:element ref="pla:nagłówek"/>
+            <xs:element ref="dp:listaProwadzących"/>
+            <xs:element ref="plan" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="nagłówek">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="autorzy"/>
+                <xs:element ref="uczelnia"/>
+                <xs:element ref="wydział"/>
+                <xs:element ref="kierunek"/>
+                <xs:element ref="semestr"/>
+                <xs:element ref="specjalizacja"/>
+                <xs:element ref="cz:data"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="autorzy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="autor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="uczelnia" type="xs:token"/>
+
+    <xs:element name="wydział" type="xs:token"/>
+
+    <xs:element name="imię" type="xs:token"/>
+
+    <xs:element name="nazwisko" type="xs:token"/>
+
+    <xs:element name="semestr">
+        <xs:simpleType>
+            <xs:restriction base="xs:NMTOKEN">
+              <xs:pattern value="I?V|V?I{1,3}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="index">
+        <xs:simpleType>
+            <xs:restriction base="xs:unsignedInt">
+                <xs:minInclusive value="100000"/>
+                <xs:maxExclusive value="250000"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="kierunek" type="xs:token"/>
+
+    <xs:element name="specjalizacja" type="xs:token"/>
+
+    <xs:element name="plan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dzień" maxOccurs="7"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="autor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imię"/>
+                <xs:element ref="nazwisko"/>
+                <xs:element ref="index"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dzień">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="zajęcia" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nazwa_dnia" type="xs:token" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="zajęcia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="przedmiot" minOccurs="0"/>
+                <xs:element ref="prowadzący" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="cz:czas" minOccurs="0"/>
+                <xs:element ref="budynek" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="blok" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedByte">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="6"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="rodzaj" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="wykład"/>
+                        <xs:enumeration value="ćwiczenia"/>
+                        <xs:enumeration value="laboratorium"/>
+                        <xs:enumeration value="okienko"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="przedmiot" type="xs:token"/>
+
+    <xs:element name="budynek">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="numer" minOccurs="1"/>
+                <xs:element ref="numer_sali" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="prowadzący">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tytuł" minOccurs="0"/>
+                <xs:element ref="imię"/>
+                <xs:element ref="nazwisko"/>
+            </xs:sequence>
+            <xs:attribute name="kto" type="xs:IDREF" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="numer_sali" type="xs:token"/>
+
+    <xs:element name="numer" type="xs:token"/>
+
+    <xs:element name="tytuł" type="xs:token"/>
+
+</xs:schema>

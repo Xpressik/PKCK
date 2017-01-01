@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainWindowController">
+   <children>
+      <Button layoutX="266.0" layoutY="55.0" mnemonicParsing="false" onAction="#authorsBtnOnClick" prefWidth="99.0" text="Autorzy">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="141.0" mnemonicParsing="false" onAction="#teachersBtnOnClick" text="Prowadzący">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="227.0" mnemonicParsing="false" onAction="#timetableBtnOnClick" prefWidth="99.0" text="Plan Zajęć">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#quitBtnOnClick" prefWidth="99.0" text="Wyjście">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

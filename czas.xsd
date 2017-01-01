@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              targetNamespace="http://czas.example.com"
+              xmlns="http://czas.example.com">
+
+    <xs:element name="data">
+        <xs:complexType>
+            <xs:attribute name="dzień" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedByte">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="31"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="miesiąc" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                        <xs:pattern value="I?X|XI{1,2}|I?V|V?I{1,3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="rok" type="xs:gYear" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="czas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="start"/>
+                <xs:element ref="koniec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="start" type="godzina"/>
+
+    <xs:element name="koniec" type="godzina"/>
+
+    <xs:simpleType name="godzina">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(1?\d|2[0-3]):\d{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

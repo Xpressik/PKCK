@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema	xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://definicjeProwadzacych.example.com"
+           xmlns:dp="http://definicjeProwadzacych.example.com">
+
+    <element name="listaProwadzących">
+        <complexType>
+            <sequence>
+                <element ref="dp:definicjaProwadzącego" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="definicjaProwadzącego">
+        <complexType>
+            <attributeGroup ref="dp:daneOsoby"/>
+            <attribute name="identyfikator" use="required">
+                <simpleType>
+                    <restriction base="ID">
+                        <maxLength value="4"/>
+                    </restriction>
+                </simpleType>
+            </attribute>
+        </complexType>
+    </element>
+
+    <attributeGroup name="daneOsoby">
+        <attribute name="stopień" type="token" use="optional"/>
+        <attribute name="imię" type="token" use="required"/>
+        <attribute name="nazwisko" type="NMTOKEN" use="required"/>
+    </attributeGroup>
+
+</schema>

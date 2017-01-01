@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AuthorsController">
+   <children>
+      <Button fx:id="button" layoutX="40.0" layoutY="296.0" mnemonicParsing="false" onAction="#buttonOnClick" prefWidth="110.0" text="Dodaj Autora">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TableView fx:id="tableView" layoutX="30.0" layoutY="54.0" prefHeight="224.0" prefWidth="580.0">
+         <columns>
+            <TableColumn fx:id="columnImie" prefWidth="170.0" text="Imię" />
+            <TableColumn fx:id="columnNazwisko" minWidth="0.0" prefWidth="262.0" text="Nazwisko" />
+            <TableColumn fx:id="columnNrIndeksu" prefWidth="146.0" text="Nr Indeksu" />
+         </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autorzy">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="490.0" layoutY="296.0" mnemonicParsing="false" onAction="#backBtnOnClick" prefWidth="110.0" text="Powrót">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="190.0" layoutY="296.0" mnemonicParsing="false" onAction="#editBtnOnClick" text="Edytuj Autora">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLbl" layoutX="170.0" layoutY="18.0" text="Aby edytować musisz wybrać autora z listy" textFill="#d70000" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="340.0" layoutY="296.0" mnemonicParsing="false" onAction="#deleteAuthorBtnOnClick" prefWidth="110.0" text="Usuń Autora">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
