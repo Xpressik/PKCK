@@ -9,13 +9,16 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+import logic.JAXBLogic;
 import javafx.stage.Stage;
 import view.EditAuthorController;
 import view.FrameController;
 
 public class Main extends Application{
 
-	private Stage stage;
+	private static Stage stage;
 	private static BorderPane mainFrame;
 	
 	public static Autor selectedAuthor;
@@ -86,4 +89,12 @@ public class Main extends Application{
 		FrameController.anchorPane = fxmlLoader.load(); 
 		mainFrame.setBottom(FrameController.anchorPane);
 	}
+	
+	public static void showFileChooser(){
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Wybierz plik xml");
+		fileChooser.getExtensionFilters().add(new ExtensionFilter("XML", "*.xml"));
+		JAXBLogic.setXmlFilePath(fileChooser.showOpenDialog(stage).getAbsolutePath());
+	}
+	
 }

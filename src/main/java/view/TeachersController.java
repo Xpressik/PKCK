@@ -1,5 +1,6 @@
 package view;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
@@ -8,10 +9,12 @@ import classes.from.xsd.DefinicjaProwadz¹cego;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import logic.JAXBLogic;
 import main.Main;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 public class TeachersController {
@@ -36,7 +39,15 @@ public class TeachersController {
 		surnameColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Nazwisko"));
 		idColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Identyfikator"));
 		table.setItems(null);
-		refreshList();
+		try {
+			refreshList();
+		} catch (FileNotFoundException e) {
+			Alert info = new Alert(AlertType.ERROR);
+			info.setTitle("Plik nie istnieje");
+			info.setHeaderText("Plik nie istnieje");
+			info.setContentText(e.getMessage());
+			info.showAndWait();
+		}
 	}
 
 	@FXML
@@ -44,7 +55,7 @@ public class TeachersController {
 		Main.showMainWindow();
 	}
 
-	public void refreshList() throws JAXBException {
+	public void refreshList() throws JAXBException, FileNotFoundException {
 		JAXBLogic.readFromXML();
 		table.setItems(FXCollections
 				.observableArrayList(JAXBLogic.zbiórPlanówZajêæ.getListaProwadz¹cych().getDefinicjaProwadz¹cego()));

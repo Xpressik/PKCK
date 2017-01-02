@@ -10,6 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import main.Main;
 
 public class FrameController implements Initializable {
 
@@ -20,10 +22,12 @@ public class FrameController implements Initializable {
 	private Alert info;
 	@FXML
 	public static AnchorPane anchorPane;
+	@FXML
+	MenuItem xmlPath;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+
 	}
 
 	public void applyCloseBtn() {
@@ -37,6 +41,11 @@ public class FrameController implements Initializable {
 		info.setHeaderText("Zadanie 5 PKCK.");
 		info.setContentText("Autorzy: Dawid Dziedziczak, Micha³ Mackiewicz");
 		info.showAndWait();
+	}
+
+	@FXML
+	public void xmlFilePathOnClick() {	
+		Main.showFileChooser();
 	}
 
 }

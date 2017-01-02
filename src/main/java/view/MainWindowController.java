@@ -11,9 +11,10 @@ import main.Main;
 public class MainWindowController {
 
 	@FXML
-	public void authorsBtnOnClick() throws IOException, JAXBException {
+	public void authorsBtnOnClick() throws JAXBException, IOException {
 		Main.showAuthorsWindow();
-	}	
+
+	}
 
 	@FXML
 	public void teachersBtnOnClick() throws IOException {

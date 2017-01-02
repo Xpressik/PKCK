@@ -1,5 +1,6 @@
 package view;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +13,9 @@ import classes.from.xsd.Prowadz¹cy;
 import classes.from.xsd.Zajêcia;
 import javafx.fxml.FXML;
 import main.Main;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import logic.JAXBLogic;
 
 public class TimetableController {
@@ -196,31 +199,43 @@ public class TimetableController {
 		subjectLblList.add(thursdaySubjectLblList);
 		subjectLblList.add(fridaySubjectLblList);
 		
-		JAXBLogic.readFromXML();
-		
-		int j = 0;
-		for (Dzieñ day : JAXBLogic.zbiórPlanówZajêæ.getPlan().getDzieñ())     
-		{
-			for(Zajêcia z : day.getZajêcia()){
-				if(z.getRodzaj().equals("okienko")){
-					
-				}
-				else{
-					int i = z.getBlok() - 1;
-					String time = new String(z.getCzas().getStart() + " - " + z.getCzas().getKoniec());
-					String place = new String(z.getBudynek().getNumer() + ", " + z.getBudynek().getNumerSali());
-					String teachers = new String("");
-					for (Prowadz¹cy p : z.getProwadz¹cy()) {
-						teachers += p.getTytu³() + " " + p.getImiê() + " " + p.getNazwisko() + "\n";
+		try {
+			JAXBLogic.readFromXML();
+			
+			int j = 0;
+			for (Dzieñ day : JAXBLogic.zbiórPlanówZajêæ.getPlan().getDzieñ())     
+			{
+				for(Zajêcia z : day.getZajêcia()){
+					if(z.getRodzaj().equals("okienko")){
+						
 					}
-					subjectLblList.get(j).get(i).setText(z.getPrzedmiot());
-					timeLblList.get(j).get(i).setText(time);
-					placeLblList.get(j).get(i).setText(place);
-					teachersLblList.get(j).get(i).setText(teachers);
+					else{
+						int i = z.getBlok() - 1;
+						String time = new String(z.getCzas().getStart() + " - " + z.getCzas().getKoniec());
+						String place = new String(z.getBudynek().getNumer() + ", " + z.getBudynek().getNumerSali());
+						String teachers = new String("");
+						for (Prowadz¹cy p : z.getProwadz¹cy()) {
+							teachers += p.getTytu³() + " " + p.getImiê() + " " + p.getNazwisko() + "\n";
+						}
+						subjectLblList.get(j).get(i).setText(z.getPrzedmiot());
+						timeLblList.get(j).get(i).setText(time);
+						placeLblList.get(j).get(i).setText(place);
+						teachersLblList.get(j).get(i).setText(teachers);
+					}
 				}
+				j++;
 			}
-			j++;
+			
+			
+		} catch (FileNotFoundException e) {
+			Alert info = new Alert(AlertType.ERROR);
+			info.setTitle("Plik nie istnieje");
+			info.setHeaderText("Plik nie istnieje");
+			info.setContentText(e.getMessage());
+			info.showAndWait();
 		}
+		
+		
 	}
 
 	@FXML

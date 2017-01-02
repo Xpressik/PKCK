@@ -1,6 +1,8 @@
 package logic;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -14,9 +16,12 @@ public class JAXBLogic {
 	private static JAXBContext jaxbContext;
 	private static Unmarshaller unmarshaller;
 	private static Marshaller marshaller;
+	private static String xmlFilePath;
+	
 	public static ZbiórPlanówZajêæ zbiórPlanówZajêæ;
 
 	static {
+		xmlFilePath = "plan.xml";
 		try {
 			jaxbContext = JAXBContext.newInstance(ZbiórPlanówZajêæ.class);
 			unmarshaller = jaxbContext.createUnmarshaller();
@@ -29,12 +34,19 @@ public class JAXBLogic {
 
 	public static void saveToXML() throws JAXBException {
 
-		marshaller.marshal(zbiórPlanówZajêæ, new File("plan.xml"));
+		marshaller.marshal(zbiórPlanówZajêæ, new File(xmlFilePath));
 	}
 
-	public static void readFromXML() throws JAXBException {
+	public static void readFromXML() throws JAXBException, FileNotFoundException {
+		zbiórPlanówZajêæ = (ZbiórPlanówZajêæ) unmarshaller.unmarshal(new FileInputStream(new File(xmlFilePath)));
+	}
 
-		zbiórPlanówZajêæ = (ZbiórPlanówZajêæ) unmarshaller.unmarshal(new File("plan.xml"));
+	public static String getXmlFilePath() {
+		return xmlFilePath;
+	}
+
+	public static void setXmlFilePath(String xmlFilePath) {
+		JAXBLogic.xmlFilePath = xmlFilePath;
 	}
 
 }

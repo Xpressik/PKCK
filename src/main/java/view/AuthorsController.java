@@ -1,5 +1,6 @@
 package view;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
@@ -8,9 +9,11 @@ import classes.from.xsd.Autor;
 import classes.from.xsd.ZbiórPlanówZajêæ;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import logic.JAXBLogic;
 import main.Main;
@@ -42,7 +45,17 @@ public class AuthorsController {
 		columnNazwisko.setCellValueFactory(new PropertyValueFactory<Autor, String>("Nazwisko"));
 		columnNrIndeksu.setCellValueFactory(new PropertyValueFactory<Autor, String>("Index"));
 		tableView.setItems(null);
-		odswiezListe();
+		
+		try {
+			odswiezListe();
+		} catch (FileNotFoundException e) {
+			Alert info = new Alert(AlertType.ERROR);
+			info.setTitle("Plik nie istnieje");
+			info.setHeaderText("Plik nie istnieje");
+			info.setContentText(e.getMessage());
+			info.showAndWait();
+		}
+
 	}
 
 	@FXML
@@ -50,7 +63,7 @@ public class AuthorsController {
 		Main.showAddAuthorsWindow();
 	}
 
-	public void odswiezListe() throws JAXBException {
+	public void odswiezListe() throws JAXBException, FileNotFoundException{
 
 		JAXBLogic.readFromXML();
 		tableView.setItems(

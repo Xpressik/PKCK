@@ -1,353 +1,338 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <plany xmlns:ns2="http://czas.example.com" xmlns:ns3="http://definicjeProwadzacych.example.com">
-	<nagłówek>
-		<autorzy>
-			<autor>
-				<imię>Michał</imię>
-				<nazwisko>Mackiewicz</nazwisko>
-				<index>195651</index>
-			</autor>
-			<autor>
-				<imię>Dawid</imię>
-				<nazwisko>Dziedziczak</nazwisko>
-				<index>195576</index>
-			</autor>
-		</autorzy>
-		<uczelnia>Politechnika Łódzka</uczelnia>
-		<wydział>FTIMS</wydział>
-		<kierunek>Informatyka</kierunek>
-		<semestr>V</semestr>
-		<specjalizacja>Inżynieria Oprogramowania</specjalizacja>
-		<ns2:data dzień="25" miesiąc="X" rok="2016" />
-	</nagłówek>
-	<ns3:listaProwadzących>
-		<ns3:definicjaProwadzącego identyfikator="PS"
-			stopień="prof." imię="Piotr" nazwisko="Szczepaniak" />
-		<ns3:definicjaProwadzącego identyfikator="JA"
-			stopień="dr inż." imię="Jarosław" nazwisko="Andrzejczak" />
-		<ns3:definicjaProwadzącego identyfikator="JS"
-			stopień="prof." imię="Jerzy" nazwisko="Stanecki" />
-		<ns3:definicjaProwadzącego identyfikator="APM"
-			stopień="dr hab." imię="Aneta" nazwisko="Poniszewska-Marańda" />
-		<ns3:definicjaProwadzącego identyfikator="AD"
-			stopień="dr inż." imię="Agnieszka" nazwisko="Duraj" />
-		<ns3:definicjaProwadzącego identyfikator="JOM"
-			stopień="dr inż." imię="Joanna" nazwisko="Ochelska-Mierzejewska" />
-		<ns3:definicjaProwadzącego identyfikator="BRK"
-			stopień="mgr" imię="Barbara" nazwisko="Rosicka-Koczur" />
-		<ns3:definicjaProwadzącego identyfikator="RS"
-			stopień="dr inż." imię="Rafał" nazwisko="Szrajber" />
-		<ns3:definicjaProwadzącego identyfikator="MR"
-			stopień="dr inż." imię="Michał" nazwisko="Morawski" />
-		<ns3:definicjaProwadzącego identyfikator="WW"
-			stopień="mgr inż." imię="Wiktor" nazwisko="Wandachowicz" />
-		<ns3:definicjaProwadzącego identyfikator="BB"
-			stopień="dr inż." imię="Bożena" nazwisko="Borowska" />
-		<ns3:definicjaProwadzącego identyfikator="PT"
-			stopień="mgr inż." imię="Paweł" nazwisko="Tarasiuk" />
-		<ns3:definicjaProwadzącego identyfikator="AZ"
-			stopień="dr hab." imię="Przemysław" nazwisko="Ignaciuk" />
-		<ns3:definicjaProwadzącego identyfikator="PI"
-			stopień="dr hab." imię="Adam" nazwisko="Wojciechowski" />
-		<ns3:definicjaProwadzącego identyfikator="KM"
-			stopień="dr inż." imię="Krzysztof" nazwisko="Myszkorowski" />
-		<ns3:definicjaProwadzącego identyfikator="GK"
-			stopień="mgr" imię="Gabriel" nazwisko="Kabza" />
-	</ns3:listaProwadzących>
-	<plan>
-		<dzień nazwa_dnia="poniedziałek">
-			<zajęcia blok="1" rodzaj="wykład">
-				<przedmiot>Analiza Danych</przedmiot>
-				<prowadzący kto="PS">
-					<tytuł>prof.</tytuł>
-					<imię>Piotr</imię>
-					<nazwisko>Szczepaniak</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>8:15</ns2:start>
-					<ns2:koniec>10:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F2</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="2" rodzaj="okienko" />
-			<zajęcia blok="3" rodzaj="wykład">
-				<przedmiot>Inżynieria Oprogramowania</przedmiot>
-				<prowadzący kto="APM">
-					<tytuł>dr hab.</tytuł>
-					<imię>Aneta</imię>
-					<nazwisko>Poniszewska-Marańda</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>12:15</ns2:start>
-					<ns2:koniec>13:45</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F10</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="4" rodzaj="wykład">
-				<przedmiot>Zaawansowane SBD</przedmiot>
-				<prowadzący kto="KM">
-					<tytuł>dr inż.</tytuł>
-					<imię>Krzysztof</imię>
-					<nazwisko>Myszkorowski</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>14:15</ns2:start>
-					<ns2:koniec>16:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F3</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="5" rodzaj="wykład">
-				<przedmiot>Wybr. zagadn. hist. sztuki</przedmiot>
-				<prowadzący kto="JS">
-					<tytuł>prof.</tytuł>
-					<imię>Jerzy</imię>
-					<nazwisko>Stanecki</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>16:15</ns2:start>
-					<ns2:koniec>18:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F7</numer_sali>
-				</budynek>
-			</zajęcia>
-		</dzień>
-		<dzień nazwa_dnia="wtorek">
-			<zajęcia blok="1" rodzaj="okienko" />
-			<zajęcia blok="2" rodzaj="laboratorium">
-				<przedmiot>Podstawy gier komputerowych</przedmiot>
-				<prowadzący kto="JA">
-					<tytuł>dr inż.</tytuł>
-					<imię>Jarosław</imię>
-					<nazwisko>Andrzejczak</nazwisko>
-				</prowadzący>
-				<prowadzący kto="RS">
-					<tytuł>dr inż.</tytuł>
-					<imię>Rafał</imię>
-					<nazwisko>Szrajber</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>10:00</ns2:start>
-					<ns2:koniec>11:30</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F2</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="3" rodzaj="laboratorium">
-				<przedmiot>Zaawansowane SBD</przedmiot>
-				<prowadzący kto="AD">
-					<tytuł>dr inż.</tytuł>
-					<imię>Agnieszka</imię>
-					<nazwisko>Duraj</nazwisko>
-				</prowadzący>
-				<prowadzący kto="KM">
-					<tytuł>dr inż.</tytuł>
-					<imię>Krzysztof</imię>
-					<nazwisko>Myszkorowski</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>12:15</ns2:start>
-					<ns2:koniec>14:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>441</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="4" rodzaj="ćwiczenia">
-				<przedmiot>Języki obce</przedmiot>
-				<prowadzący kto="BRK">
-					<tytuł>mgr</tytuł>
-					<imię>Barbara</imię>
-					<nazwisko>Rosicka-Koczur</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>14:15</ns2:start>
-					<ns2:koniec>16:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>SPNJO</numer>
-					<numer_sali>24</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="5" rodzaj="wykład">
-				<przedmiot>Systemy wbudowane</przedmiot>
-				<prowadzący kto="MR">
-					<tytuł>dr inż.</tytuł>
-					<imię>Michał</imię>
-					<nazwisko>Morawski</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>16:15</ns2:start>
-					<ns2:koniec>18:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B14</numer>
-					<numer_sali>F0.4</numer_sali>
-				</budynek>
-			</zajęcia>
-		</dzień>
-		<dzień nazwa_dnia="środa">
-			<zajęcia blok="1" rodzaj="laboratorium">
-				<przedmiot>Program. człowiek-komputer</przedmiot>
-				<prowadzący kto="JOM">
-					<tytuł>dr inż.</tytuł>
-					<imię>Joanna</imię>
-					<nazwisko>Ochelska-Mierzejewska</nazwisko>
-				</prowadzący>
-				<prowadzący kto="WW">
-					<tytuł>mgr inż.</tytuł>
-					<imię>Wiktor</imię>
-					<nazwisko>Wandachowicz</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>8:30</ns2:start>
-					<ns2:koniec>10:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B14</numer>
-					<numer_sali>1.12</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="2" rodzaj="wykład">
-				<przedmiot>Program. człowiek-komputer</przedmiot>
-				<prowadzący kto="JOM">
-					<tytuł>dr inż.</tytuł>
-					<imię>Joanna</imię>
-					<nazwisko>Ochelska-Mierzejewska</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>10:15</ns2:start>
-					<ns2:koniec>12:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B14</numer>
-					<numer_sali>0.4</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="3" rodzaj="laboratorium">
-				<przedmiot>Inżynieria oprogramowania</przedmiot>
-				<prowadzący kto="BB">
-					<tytuł>dr inż.</tytuł>
-					<imię>Bożena</imię>
-					<nazwisko>Borowska</nazwisko>
-				</prowadzący>
-				<prowadzący kto="APM">
-					<tytuł>dr hab.</tytuł>
-					<imię>Aneta</imię>
-					<nazwisko>Poniszewska-Marańda</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>12:15</ns2:start>
-					<ns2:koniec>13:45</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>435</numer_sali>
-				</budynek>
-			</zajęcia>
-		</dzień>
-		<dzień nazwa_dnia="czwartek">
-			<zajęcia blok="1" rodzaj="wykład">
-				<przedmiot>Podstawy gier komputerowych</przedmiot>
-				<prowadzący kto="PI">
-					<tytuł>dr hab.</tytuł>
-					<imię>Adam</imię>
-					<nazwisko>Wojciechowski</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>8:15</ns2:start>
-					<ns2:koniec>10:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>F2</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="2" rodzaj="ćwiczenia">
-				<przedmiot>Języki obce</przedmiot>
-				<prowadzący kto="BRK">
-					<tytuł>mgr</tytuł>
-					<imię>Barbara</imię>
-					<nazwisko>Rosicka-Koczur</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>10:15</ns2:start>
-					<ns2:koniec>12:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>SPNJO</numer>
-					<numer_sali>22</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="3" rodzaj="ćwiczenia">
-				<przedmiot>Wychowanie fizyczne</przedmiot>
-				<prowadzący kto="GK">
-					<tytuł>mgr</tytuł>
-					<imię>Gabriel</imię>
-					<nazwisko>Kabza</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>12:15</ns2:start>
-					<ns2:koniec>13:45</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>SWFiS</numer>
-					<numer_sali>1</numer_sali>
-				</budynek>
-			</zajęcia>
-		</dzień>
-		<dzień nazwa_dnia="piątek">
-			<zajęcia blok="1" rodzaj="laboratorium">
-				<przedmiot>Systemy wbudowane</przedmiot>
-				<prowadzący kto="MR">
-					<tytuł>dr inż.</tytuł>
-					<imię>Michał</imię>
-					<nazwisko>Morawski</nazwisko>
-				</prowadzący>
-				<prowadzący kto="AZ">
-					<tytuł>dr hab.</tytuł>
-					<imię>Przemysław</imię>
-					<nazwisko>Ignaciuk</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>8:15</ns2:start>
-					<ns2:koniec>10:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>CTI</numer>
-					<numer_sali>106</numer_sali>
-				</budynek>
-			</zajęcia>
-			<zajęcia blok="2" rodzaj="okienko" />
-			<zajęcia blok="3" rodzaj="laboratorium">
-				<przedmiot>Wyb. zag. algo.</przedmiot>
-				<prowadzący kto="PT">
-					<tytuł>mgr inż.</tytuł>
-					<imię>Paweł</imię>
-					<nazwisko>Tarasiuk</nazwisko>
-				</prowadzący>
-				<ns2:czas>
-					<ns2:start>12:15</ns2:start>
-					<ns2:koniec>14:00</ns2:koniec>
-				</ns2:czas>
-				<budynek>
-					<numer>B9</numer>
-					<numer_sali>441</numer_sali>
-				</budynek>
-			</zajęcia>
-		</dzień>
-	</plan>
+    <nagłówek>
+        <autorzy>
+            <autor>
+                <imię>Michał</imię>
+                <nazwisko>Mackiewicz</nazwisko>
+                <index>195651</index>
+            </autor>
+            <autor>
+                <imię>Dawid</imię>
+                <nazwisko>Dziedziczak</nazwisko>
+                <index>195576</index>
+            </autor>
+        </autorzy>
+        <uczelnia>Politechnika Łódzka</uczelnia>
+        <wydział>FTIMS</wydział>
+        <kierunek>Informatyka</kierunek>
+        <semestr>V</semestr>
+        <specjalizacja>Inżynieria Oprogramowania</specjalizacja>
+        <ns2:data dzień="25" miesiąc="X" rok="2016"/>
+    </nagłówek>
+    <ns3:listaProwadzących>
+        <ns3:definicjaProwadzącego identyfikator="PS" stopień="prof." imię="Piotr" nazwisko="Szczepaniak"/>
+        <ns3:definicjaProwadzącego identyfikator="JA" stopień="dr inż." imię="Jarosław" nazwisko="Andrzejczak"/>
+        <ns3:definicjaProwadzącego identyfikator="JS" stopień="prof." imię="Jerzy" nazwisko="Stanecki"/>
+        <ns3:definicjaProwadzącego identyfikator="APM" stopień="dr hab." imię="Aneta" nazwisko="Poniszewska-Marańda"/>
+        <ns3:definicjaProwadzącego identyfikator="AD" stopień="dr inż." imię="Agnieszka" nazwisko="Duraj"/>
+        <ns3:definicjaProwadzącego identyfikator="JOM" stopień="dr inż." imię="Joanna"
+                                   nazwisko="Ochelska-Mierzejewska"/>
+        <ns3:definicjaProwadzącego identyfikator="BRK" stopień="mgr" imię="Barbara" nazwisko="Rosicka-Koczur"/>
+        <ns3:definicjaProwadzącego identyfikator="RS" stopień="dr inż." imię="Rafał" nazwisko="Szrajber"/>
+        <ns3:definicjaProwadzącego identyfikator="MR" stopień="dr inż." imię="Michał" nazwisko="Morawski"/>
+        <ns3:definicjaProwadzącego identyfikator="WW" stopień="mgr inż." imię="Wiktor" nazwisko="Wandachowicz"/>
+        <ns3:definicjaProwadzącego identyfikator="BB" stopień="dr inż." imię="Bożena" nazwisko="Borowska"/>
+        <ns3:definicjaProwadzącego identyfikator="PT" stopień="mgr inż." imię="Paweł" nazwisko="Tarasiuk"/>
+        <ns3:definicjaProwadzącego identyfikator="AZ" stopień="dr hab." imię="Przemysław" nazwisko="Ignaciuk"/>
+        <ns3:definicjaProwadzącego identyfikator="PI" stopień="dr hab." imię="Adam" nazwisko="Wojciechowski"/>
+        <ns3:definicjaProwadzącego identyfikator="KM" stopień="dr inż." imię="Krzysztof" nazwisko="Myszkorowski"/>
+        <ns3:definicjaProwadzącego identyfikator="GK" stopień="mgr" imię="Gabriel" nazwisko="Kabza"/>
+    </ns3:listaProwadzących>
+    <plan>
+        <dzień nazwa_dnia="poniedziałek">
+            <zajęcia blok="1" rodzaj="wykład">
+                <przedmiot>Analiza Danych</przedmiot>
+                <prowadzący kto="PS">
+                    <tytuł>prof.</tytuł>
+                    <imię>Piotr</imię>
+                    <nazwisko>Szczepaniak</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>8:15</ns2:start>
+                    <ns2:koniec>10:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F2</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="2" rodzaj="okienko"/>
+            <zajęcia blok="3" rodzaj="wykład">
+                <przedmiot>Inżynieria Oprogramowania</przedmiot>
+                <prowadzący kto="APM">
+                    <tytuł>dr hab.</tytuł>
+                    <imię>Aneta</imię>
+                    <nazwisko>Poniszewska-Marańda</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>12:15</ns2:start>
+                    <ns2:koniec>13:45</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F10</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="4" rodzaj="wykład">
+                <przedmiot>Zaawansowane SBD</przedmiot>
+                <prowadzący kto="KM">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Krzysztof</imię>
+                    <nazwisko>Myszkorowski</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>14:15</ns2:start>
+                    <ns2:koniec>16:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F3</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="5" rodzaj="wykład">
+                <przedmiot>Wybr. zagadn. hist. sztuki</przedmiot>
+                <prowadzący kto="JS">
+                    <tytuł>prof.</tytuł>
+                    <imię>Jerzy</imię>
+                    <nazwisko>Stanecki</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>16:15</ns2:start>
+                    <ns2:koniec>18:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F7</numer_sali>
+                </budynek>
+            </zajęcia>
+        </dzień>
+        <dzień nazwa_dnia="wtorek">
+            <zajęcia blok="1" rodzaj="okienko"/>
+            <zajęcia blok="2" rodzaj="laboratorium">
+                <przedmiot>Podstawy gier komputerowych</przedmiot>
+                <prowadzący kto="JA">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Jarosław</imię>
+                    <nazwisko>Andrzejczak</nazwisko>
+                </prowadzący>
+                <prowadzący kto="RS">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Rafał</imię>
+                    <nazwisko>Szrajber</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>10:00</ns2:start>
+                    <ns2:koniec>11:30</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F2</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="3" rodzaj="laboratorium">
+                <przedmiot>Zaawansowane SBD</przedmiot>
+                <prowadzący kto="AD">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Agnieszka</imię>
+                    <nazwisko>Duraj</nazwisko>
+                </prowadzący>
+                <prowadzący kto="KM">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Krzysztof</imię>
+                    <nazwisko>Myszkorowski</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>12:15</ns2:start>
+                    <ns2:koniec>14:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>441</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="4" rodzaj="ćwiczenia">
+                <przedmiot>Języki obce</przedmiot>
+                <prowadzący kto="BRK">
+                    <tytuł>mgr</tytuł>
+                    <imię>Barbara</imię>
+                    <nazwisko>Rosicka-Koczur</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>14:15</ns2:start>
+                    <ns2:koniec>16:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>SPNJO</numer>
+                    <numer_sali>24</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="5" rodzaj="wykład">
+                <przedmiot>Systemy wbudowane</przedmiot>
+                <prowadzący kto="MR">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Michał</imię>
+                    <nazwisko>Morawski</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>16:15</ns2:start>
+                    <ns2:koniec>18:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B14</numer>
+                    <numer_sali>F0.4</numer_sali>
+                </budynek>
+            </zajęcia>
+        </dzień>
+        <dzień nazwa_dnia="środa">
+            <zajęcia blok="1" rodzaj="laboratorium">
+                <przedmiot>Program. człowiek-komputer</przedmiot>
+                <prowadzący kto="JOM">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Joanna</imię>
+                    <nazwisko>Ochelska-Mierzejewska</nazwisko>
+                </prowadzący>
+                <prowadzący kto="WW">
+                    <tytuł>mgr inż.</tytuł>
+                    <imię>Wiktor</imię>
+                    <nazwisko>Wandachowicz</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>8:30</ns2:start>
+                    <ns2:koniec>10:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B14</numer>
+                    <numer_sali>1.12</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="2" rodzaj="wykład">
+                <przedmiot>Program. człowiek-komputer</przedmiot>
+                <prowadzący kto="JOM">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Joanna</imię>
+                    <nazwisko>Ochelska-Mierzejewska</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>10:15</ns2:start>
+                    <ns2:koniec>12:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B14</numer>
+                    <numer_sali>0.4</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="3" rodzaj="laboratorium">
+                <przedmiot>Inżynieria oprogramowania</przedmiot>
+                <prowadzący kto="BB">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Bożena</imię>
+                    <nazwisko>Borowska</nazwisko>
+                </prowadzący>
+                <prowadzący kto="APM">
+                    <tytuł>dr hab.</tytuł>
+                    <imię>Aneta</imię>
+                    <nazwisko>Poniszewska-Marańda</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>12:15</ns2:start>
+                    <ns2:koniec>13:45</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>435</numer_sali>
+                </budynek>
+            </zajęcia>
+        </dzień>
+        <dzień nazwa_dnia="czwartek">
+            <zajęcia blok="1" rodzaj="wykład">
+                <przedmiot>Podstawy gier komputerowych</przedmiot>
+                <prowadzący kto="PI">
+                    <tytuł>dr hab.</tytuł>
+                    <imię>Adam</imię>
+                    <nazwisko>Wojciechowski</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>8:15</ns2:start>
+                    <ns2:koniec>10:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>F2</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="2" rodzaj="ćwiczenia">
+                <przedmiot>Języki obce</przedmiot>
+                <prowadzący kto="BRK">
+                    <tytuł>mgr</tytuł>
+                    <imię>Barbara</imię>
+                    <nazwisko>Rosicka-Koczur</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>10:15</ns2:start>
+                    <ns2:koniec>12:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>SPNJO</numer>
+                    <numer_sali>22</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="3" rodzaj="ćwiczenia">
+                <przedmiot>Wychowanie fizyczne</przedmiot>
+                <prowadzący kto="GK">
+                    <tytuł>mgr</tytuł>
+                    <imię>Gabriel</imię>
+                    <nazwisko>Kabza</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>12:15</ns2:start>
+                    <ns2:koniec>13:45</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>SWFiS</numer>
+                    <numer_sali>1</numer_sali>
+                </budynek>
+            </zajęcia>
+        </dzień>
+        <dzień nazwa_dnia="piątek">
+            <zajęcia blok="1" rodzaj="laboratorium">
+                <przedmiot>Systemy wbudowane</przedmiot>
+                <prowadzący kto="MR">
+                    <tytuł>dr inż.</tytuł>
+                    <imię>Michał</imię>
+                    <nazwisko>Morawski</nazwisko>
+                </prowadzący>
+                <prowadzący kto="AZ">
+                    <tytuł>dr hab.</tytuł>
+                    <imię>Przemysław</imię>
+                    <nazwisko>Ignaciuk</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>8:15</ns2:start>
+                    <ns2:koniec>10:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>CTI</numer>
+                    <numer_sali>106</numer_sali>
+                </budynek>
+            </zajęcia>
+            <zajęcia blok="2" rodzaj="okienko"/>
+            <zajęcia blok="3" rodzaj="laboratorium">
+                <przedmiot>Wyb. zag. algo.</przedmiot>
+                <prowadzący kto="PT">
+                    <tytuł>mgr inż.</tytuł>
+                    <imię>Paweł</imię>
+                    <nazwisko>Tarasiuk</nazwisko>
+                </prowadzący>
+                <ns2:czas>
+                    <ns2:start>12:15</ns2:start>
+                    <ns2:koniec>14:00</ns2:koniec>
+                </ns2:czas>
+                <budynek>
+                    <numer>B9</numer>
+                    <numer_sali>441</numer_sali>
+                </budynek>
+            </zajęcia>
+        </dzień>
+    </plan>
 </plany>
