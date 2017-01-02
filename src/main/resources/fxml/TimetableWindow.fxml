@@ -1,40 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TimetableController">
    <children>
-      <TableView fx:id="tbl" layoutX="15.0" layoutY="50.0" prefHeight="250.0" prefWidth="610.0">
-        <columns>
-          <TableColumn fx:id="column1" maxWidth="122.0" prefWidth="122.0" text="1">
-               <columns>
-                  <TableColumn fx:id="timeColumn" prefWidth="30.5" text="Column X" />
-                  <TableColumn fx:id="teacherColumn" prefWidth="30.5" text="Column X" />
-                  <TableColumn fx:id="subjectColumn" prefWidth="30.5" text="Column X" />
-                  <TableColumn fx:id="placeColumn" prefWidth="30.5" text="Column X" />
-               </columns>
-            </TableColumn>
-          <TableColumn fx:id="column2" prefWidth="122.0" text="2">
-               <columns>
-                  <TableColumn prefWidth="75.0" text="Column X" />
-               </columns>
-            </TableColumn>
-            <TableColumn fx:id="column3" prefWidth="122.0" text="3" />
-            <TableColumn fx:id="column4" prefWidth="122.0" text="4" />
-            <TableColumn fx:id="column5" prefWidth="122.0" text="5" />
-        </columns>
-      </TableView>
-      <Label layoutX="14.0" layoutY="14.0" text="Plan Zajęć">
+      <Label layoutX="14.0" layoutY="1.0" text="Plan Zajęć">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="293.0" layoutY="311.0" mnemonicParsing="false" onAction="#backBtnOnClick" text="Powrót" />
+      <ScrollPane layoutY="30.0" prefHeight="280.0" prefWidth="640.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="1026.0">
+               <children>
+                  <Group layoutX="5.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="mondayTimelbl1" layoutY="20.0" />
+                              <Label fx:id="mondaySubjectLbl1" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mondayTeachersLbl1" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="mondayPlaceLbl1" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="205.0">
+                           <children>
+                              <Label fx:id="mondayTimeLbl2" layoutY="20.0" />
+                              <Label fx:id="mondaySubjectLbl2" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mondayTeachersLbl2" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="mondayPlaceLbl2" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="410.0">
+                           <children>
+                              <Label fx:id="mondayTimeLbl3" layoutY="20.0" />
+                              <Label fx:id="mondaySubjectLbl3" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mondayTeachresLbl3" layoutY="54.0" prefHeight="34.0" wrapText="true" />
+                              <Label fx:id="mondayPlaceLbl3" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="615.0">
+                           <children>
+                              <Label fx:id="mondayTimeLbl4" layoutY="20.0" />
+                              <Label fx:id="mondaySubjectLbl4" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mondayTeachersLbl4" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="mondayPlaceLbl4" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="820.0">
+                           <children>
+                              <Label fx:id="mondayTimeLbl5" layoutY="20.0" />
+                              <Label fx:id="mondaySubjectLbl5" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mondayTeachersLbl5" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="mondayPlaceLbl5" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Label text="Poniedziałek">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-15.0" prefWidth="1040.0" />
+                        <Separator layoutX="-15.0" layoutY="18.0" prefWidth="1040.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="5.0" layoutY="90.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="tuesdayTimelbl1" layoutY="20.0" />
+                              <Label fx:id="tuesdaySubjectLbl1" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tuesdayTeachersLbl1" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="tuesdayPlaceLbl1" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="205.0">
+                           <children>
+                              <Label fx:id="tuesdayTimeLbl2" layoutY="20.0" />
+                              <Label fx:id="tuesdaySubjectLbl2" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tuesdayTeachersLbl2" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="tuesdayPlaceLbl2" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="410.0">
+                           <children>
+                              <Label fx:id="tuesdayTimeLbl3" layoutY="20.0" />
+                              <Label fx:id="tuesdaySubjectLbl3" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tuesdayTeachresLbl3" layoutY="54.0" prefHeight="34.0" wrapText="true" />
+                              <Label fx:id="tuesdayPlaceLbl3" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="615.0">
+                           <children>
+                              <Label fx:id="tuesdayTimeLbl4" layoutY="20.0" />
+                              <Label fx:id="tuesdaySubjectLbl4" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tuesdayTeachersLbl4" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="tuesdayPlaceLbl4" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="820.0">
+                           <children>
+                              <Label fx:id="tuesdayTimeLbl5" layoutY="20.0" />
+                              <Label fx:id="tuesdaySubjectLbl5" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tuesdayTeachersLbl5" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="tuesdayPlaceLbl5" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Label text="Wtorek">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-15.0" prefWidth="1040.0" />
+                        <Separator layoutX="-15.0" layoutY="18.0" prefWidth="1040.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="5.0" layoutY="180.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="wednesdayTimelbl1" layoutY="20.0" />
+                              <Label fx:id="wednesdaySubjectLbl1" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wednesdayTeachersLbl1" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="wednesdayPlaceLbl1" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="205.0">
+                           <children>
+                              <Label fx:id="wednesdayTimeLbl2" layoutY="20.0" />
+                              <Label fx:id="wednesdaySubjectLbl2" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wednesdayTeachersLbl2" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="wednesdayPlaceLbl2" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="410.0">
+                           <children>
+                              <Label fx:id="wednesdayTimeLbl3" layoutY="20.0" />
+                              <Label fx:id="wednesdaySubjectLbl3" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wednesdayTeachresLbl3" layoutY="54.0" prefHeight="34.0" wrapText="true" />
+                              <Label fx:id="wednesdayPlaceLbl3" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="615.0">
+                           <children>
+                              <Label fx:id="wednesdayTimeLbl4" layoutY="20.0" />
+                              <Label fx:id="wednesdaySubjectLbl4" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wednesdayTeachersLbl4" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="wednesdayPlaceLbl4" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="820.0">
+                           <children>
+                              <Label fx:id="wednesdayTimeLbl5" layoutY="20.0" />
+                              <Label fx:id="wednesdaySubjectLbl5" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wednesdayTeachersLbl5" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="wednesdayPlaceLbl5" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Label text="Środa">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-15.0" prefWidth="1040.0" />
+                        <Separator layoutX="-15.0" layoutY="18.0" prefWidth="1040.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="5.0" layoutY="270.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="thursdayTimelbl1" layoutY="20.0" />
+                              <Label fx:id="thursdaySubjectLbl1" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="thursdayTeachersLbl1" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="thursdayPlaceLbl1" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="205.0">
+                           <children>
+                              <Label fx:id="thursdayTimeLbl2" layoutY="20.0" />
+                              <Label fx:id="thursdaySubjectLbl2" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="thursdayTeachersLbl2" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="thursdayPlaceLbl2" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="410.0">
+                           <children>
+                              <Label fx:id="thursdayTimeLbl3" layoutY="20.0" />
+                              <Label fx:id="thursdaySubjectLbl3" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="thursdayTeachresLbl3" layoutY="54.0" prefHeight="34.0" wrapText="true" />
+                              <Label fx:id="thursdayPlaceLbl3" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="615.0">
+                           <children>
+                              <Label fx:id="thursdayTimeLbl4" layoutY="20.0" />
+                              <Label fx:id="thursdaySubjectLbl4" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="thursdayTeachersLbl4" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="thursdayPlaceLbl4" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="820.0">
+                           <children>
+                              <Label fx:id="thursdayTimeLbl5" layoutY="20.0" />
+                              <Label fx:id="thursdaySubjectLbl5" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="thursdayTeachersLbl5" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="thursdayPlaceLbl5" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Label text="Czwartek">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-15.0" prefWidth="1040.0" />
+                        <Separator layoutX="-15.0" layoutY="18.0" prefWidth="1040.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="5.0" layoutY="360.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="fridayTimelbl1" layoutY="20.0" />
+                              <Label fx:id="fridaySubjectLbl1" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fridayTeachersLbl1" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="fridayPlaceLbl1" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="205.0">
+                           <children>
+                              <Label fx:id="fridayTimeLbl2" layoutY="20.0" />
+                              <Label fx:id="fridaySubjectLbl2" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fridayTeachersLbl2" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="fridayPlaceLbl2" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="410.0">
+                           <children>
+                              <Label fx:id="fridayTimeLbl3" layoutY="20.0" />
+                              <Label fx:id="fridaySubjectLbl3" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fridayTeachresLbl3" layoutY="54.0" prefHeight="34.0" wrapText="true" />
+                              <Label fx:id="fridayPlaceLbl3" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="615.0">
+                           <children>
+                              <Label fx:id="fridayTimeLbl4" layoutY="20.0" />
+                              <Label fx:id="fridaySubjectLbl4" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fridayTeachersLbl4" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="fridayPlaceLbl4" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Group layoutX="820.0">
+                           <children>
+                              <Label fx:id="fridayTimeLbl5" layoutY="20.0" />
+                              <Label fx:id="fridaySubjectLbl5" layoutY="37.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fridayTeachersLbl5" layoutY="54.0" prefHeight="34.0" />
+                              <Label fx:id="fridayPlaceLbl5" layoutX="120.0" layoutY="20.0" />
+                              <Separator layoutX="200.0" layoutY="20.0" orientation="VERTICAL" prefHeight="70.0" />
+                           </children>
+                        </Group>
+                        <Label text="Piątek">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-15.0" prefWidth="1040.0" />
+                        <Separator layoutX="-15.0" layoutY="18.0" prefWidth="1040.0" />
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
