@@ -8,9 +8,9 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
-import classes.from.xsd.Dzieñ;
-import classes.from.xsd.Prowadz¹cy;
-import classes.from.xsd.Zajêcia;
+import classes.from.xsd.Dzien;
+import classes.from.xsd.Prowadzacy;
+import classes.from.xsd.Zajecia;
 import javafx.fxml.FXML;
 import main.Main;
 import javafx.scene.control.Alert;
@@ -203,9 +203,9 @@ public class TimetableController {
 			JAXBLogic.readFromXML();
 			
 			int j = 0;
-			for (Dzieñ day : JAXBLogic.zbiórPlanówZajêæ.getPlan().getDzieñ())     
+			for (Dzien day : JAXBLogic.zbiorPlanowZajec.getPlan().getDzieñ())     
 			{
-				for(Zajêcia z : day.getZajêcia()){
+				for(Zajecia z : day.getZajecia()){
 					if(z.getRodzaj().equals("okienko")){
 						
 					}
@@ -214,8 +214,8 @@ public class TimetableController {
 						String time = new String(z.getCzas().getStart() + " - " + z.getCzas().getKoniec());
 						String place = new String(z.getBudynek().getNumer() + ", " + z.getBudynek().getNumerSali());
 						String teachers = new String("");
-						for (Prowadz¹cy p : z.getProwadz¹cy()) {
-							teachers += p.getTytu³() + " " + p.getImiê() + " " + p.getNazwisko() + "\n";
+						for (Prowadzacy p : z.getProwadzacy()) {
+							teachers += p.getTytul() + " " + p.getImie() + " " + p.getNazwisko() + "\n";
 						}
 						subjectLblList.get(j).get(i).setText(z.getPrzedmiot());
 						timeLblList.get(j).get(i).setText(time);

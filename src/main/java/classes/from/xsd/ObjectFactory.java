@@ -57,27 +57,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Dzieñ }
+     * Create an instance of {@link Dzien }
      * 
      */
-    public Dzieñ createDzieñ() {
-        return new Dzieñ();
+    public Dzien createDzieñ() {
+        return new Dzien();
     }
 
     /**
-     * Create an instance of {@link Zajêcia }
+     * Create an instance of {@link Zajecia }
      * 
      */
-    public Zajêcia createZajêcia() {
-        return new Zajêcia();
+    public Zajecia createZajêcia() {
+        return new Zajecia();
     }
 
     /**
-     * Create an instance of {@link Prowadz¹cy }
+     * Create an instance of {@link Prowadzacy }
      * 
      */
-    public Prowadz¹cy createProwadz¹cy() {
-        return new Prowadz¹cy();
+    public Prowadzacy createProwadz¹cy() {
+        return new Prowadzacy();
     }
 
     /**
@@ -97,11 +97,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ZbiórPlanówZajêæ }
+     * Create an instance of {@link ZbiorPlanowZajec }
      * 
      */
-    public ZbiórPlanówZajêæ createZbiórPlanówZajêæ() {
-        return new ZbiórPlanówZajêæ();
+    public ZbiorPlanowZajec createZbiórPlanówZajêæ() {
+        return new ZbiorPlanowZajec();
     }
 
     /**
@@ -113,11 +113,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Nag³ówek }
+     * Create an instance of {@link Naglowek }
      * 
      */
-    public Nag³ówek createNag³ówek() {
-        return new Nag³ówek();
+    public Naglowek createNag³ówek() {
+        return new Naglowek();
     }
 
     /**
@@ -145,19 +145,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListaProwadz¹cych }
+     * Create an instance of {@link ListaProwadzacych }
      * 
      */
-    public ListaProwadz¹cych createListaProwadz¹cych() {
-        return new ListaProwadz¹cych();
+    public ListaProwadzacych createListaProwadz¹cych() {
+        return new ListaProwadzacych();
     }
 
     /**
-     * Create an instance of {@link DefinicjaProwadz¹cego }
+     * Create an instance of {@link DefinicjaProwadzacego }
      * 
      */
-    public DefinicjaProwadz¹cego createDefinicjaProwadz¹cego() {
-        return new DefinicjaProwadz¹cego();
+    public DefinicjaProwadzacego createDefinicjaProwadz¹cego() {
+        return new DefinicjaProwadzacego();
     }
 
     /**
@@ -230,12 +230,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ZbiórPlanówZajêæ }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ZbiorPlanowZajec }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "", name = "plany")
-    public JAXBElement<ZbiórPlanówZajêæ> createPlany(ZbiórPlanówZajêæ value) {
-        return new JAXBElement<ZbiórPlanówZajêæ>(_Plany_QNAME, ZbiórPlanówZajêæ.class, null, value);
+    public JAXBElement<ZbiorPlanowZajec> createPlany(ZbiorPlanowZajec value) {
+        return new JAXBElement<ZbiorPlanowZajec>(_Plany_QNAME, ZbiorPlanowZajec.class, null, value);
     }
 
     /**

@@ -12,9 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -27,8 +31,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://definicjeProwadzacych.example.com}definicjaProwadz¹cego" maxOccurs="unbounded"/>
+ *         &lt;element ref="{}zajêcia" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
+ *       &lt;attribute name="nazwa_dnia" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -38,41 +43,69 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "definicjaProwadz\u0105cego"
+    "zajecia"
 })
-@XmlRootElement(name = "listaProwadz\u0105cych", namespace = "http://definicjeProwadzacych.example.com")
-public class ListaProwadz¹cych {
-
-    @XmlElement(namespace = "http://definicjeProwadzacych.example.com", required = true)
-    protected List<DefinicjaProwadz¹cego> definicjaProwadz¹cego;
+@XmlRootElement(name = "dzie\u0144")
+public class Dzien {
+	
+    @XmlElement(name = "zaj\u0119cia") 
+    protected List<Zajecia> zajecia;
+    @XmlAttribute(name = "nazwa_dnia", required = true)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String nazwaDnia;
 
     /**
-     * Gets the value of the definicjaProwadz¹cego property.
+     * Gets the value of the zajêcia property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the definicjaProwadz¹cego property.
+     * This is why there is not a <CODE>set</CODE> method for the zajêcia property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getDefinicjaProwadz¹cego().add(newItem);
+     *    getZajêcia().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DefinicjaProwadz¹cego }
+     * {@link Zajecia }
      * 
      * 
      */
-    public List<DefinicjaProwadz¹cego> getDefinicjaProwadz¹cego() {
-        if (definicjaProwadz¹cego == null) {
-            definicjaProwadz¹cego = new ArrayList<DefinicjaProwadz¹cego>();
+    public List<Zajecia> getZajecia() {
+        if (zajecia == null) {
+            zajecia = new ArrayList<Zajecia>();
         }
-        return this.definicjaProwadz¹cego;
+        return this.zajecia;
+    }
+
+    /**
+     * Gets the value of the nazwaDnia property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNazwaDnia() {
+        return nazwaDnia;
+    }
+
+    /**
+     * Sets the value of the nazwaDnia property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNazwaDnia(String value) {
+        this.nazwaDnia = value;
     }
 
 }

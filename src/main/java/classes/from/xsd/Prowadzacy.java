@@ -44,20 +44,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "tytu\u0142",
-    "imi\u0119",
+    "tytul",
+    "imie",
     "nazwisko"
 })
 @XmlRootElement(name = "prowadz\u0105cy")
-public class Prowadz¹cy {
-
+public class Prowadzacy {
+	
+	@XmlElement(name = "tytu\u0142")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
-    protected String tytu³;
-    @XmlElement(required = true)
+    protected String tytul;
+    @XmlElement(name = "imi\u0119" ,required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
-    protected String imiê;
+    protected String imie;
     @XmlElement(required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
@@ -75,8 +76,8 @@ public class Prowadz¹cy {
      *     {@link String }
      *     
      */
-    public String getTytu³() {
-        return tytu³;
+    public String getTytul() {
+        return tytul;
     }
 
     /**
@@ -87,8 +88,8 @@ public class Prowadz¹cy {
      *     {@link String }
      *     
      */
-    public void setTytu³(String value) {
-        this.tytu³ = value;
+    public void setTytul(String value) {
+        this.tytul = value;
     }
 
     /**
@@ -99,8 +100,8 @@ public class Prowadz¹cy {
      *     {@link String }
      *     
      */
-    public String getImiê() {
-        return imiê;
+    public String getImie() {
+        return imie;
     }
 
     /**
@@ -111,8 +112,8 @@ public class Prowadz¹cy {
      *     {@link String }
      *     
      */
-    public void setImiê(String value) {
-        this.imiê = value;
+    public void setImie(String value) {
+        this.imie = value;
     }
 
     /**

@@ -1,6 +1,4 @@
-<xs:schema   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-             targetNamespace="http://plan.example.com"
-             xmlns:pla="http://plan.example.com" xmlns:dp="http://definicjeProwadzacych.example.com" xmlns:cz="http://czas.example.com">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dp="http://definicjeProwadzacych.example.com" xmlns:cz="http://czas.example.com">
 
     <xs:import namespace="http://definicjeProwadzacych.example.com" schemaLocation="definicjeProwadzacych.xsd"/>
 
@@ -14,8 +12,6 @@
     </xs:annotation>
 
     <xs:element name="plany" type="ZbiórPlanówZajęć">
-        <!-- różnica między key a unique!
-                (key tu nie działa, bo stopień może nie występować) -->
         <xs:unique name="daneProwadzącego">
             <xs:selector xpath="dp:listaProwadzących/dp:definicjaProwadzącego"/>
             <xs:field xpath="@identyfikator"/>
@@ -34,7 +30,7 @@
 
     <xs:complexType name="ZbiórPlanówZajęć">
         <xs:sequence>
-            <xs:element ref="pla:nagłówek"/>
+            <xs:element ref="nagłówek"/>
             <xs:element ref="dp:listaProwadzących"/>
             <xs:element ref="plan" maxOccurs="1"/>
         </xs:sequence>

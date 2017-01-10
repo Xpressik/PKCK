@@ -47,14 +47,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "", propOrder = {
     "autorzy",
     "uczelnia",
-    "wydzia\u0142",
+    "wydzial",
     "kierunek",
     "semestr",
     "specjalizacja",
     "data"
 })
 @XmlRootElement(name = "nag\u0142\u00f3wek")
-public class Nag³ówek {
+public class Naglowek {
 
     @XmlElement(required = true)
     protected Autorzy autorzy;
@@ -62,10 +62,10 @@ public class Nag³ówek {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String uczelnia;
-    @XmlElement(required = true)
+    @XmlElement(name = "wydzia\u0142", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
-    protected String wydzia³;
+    protected String wydzial;
     @XmlElement(required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
@@ -136,8 +136,8 @@ public class Nag³ówek {
      *     {@link String }
      *     
      */
-    public String getWydzia³() {
-        return wydzia³;
+    public String getWydzial() {
+        return wydzial;
     }
 
     /**
@@ -148,8 +148,8 @@ public class Nag³ówek {
      *     {@link String }
      *     
      */
-    public void setWydzia³(String value) {
-        this.wydzia³ = value;
+    public void setWydzial(String value) {
+        this.wydzial = value;
     }
 
     /**

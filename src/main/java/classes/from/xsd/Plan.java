@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Plan {
 
     @XmlElement(required = true)
-    protected List<Dzieñ> dzieñ;
+    protected List<Dzien> dzieñ;
 
     /**
      * Gets the value of the dzieñ property.
@@ -64,13 +64,13 @@ public class Plan {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Dzieñ }
+     * {@link Dzien }
      * 
      * 
      */
-    public List<Dzieñ> getDzieñ() {
+    public List<Dzien> getDzieñ() {
         if (dzieñ == null) {
-            dzieñ = new ArrayList<Dzieñ>();
+            dzieñ = new ArrayList<Dzien>();
         }
         return this.dzieñ;
     }

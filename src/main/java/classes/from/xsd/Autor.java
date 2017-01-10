@@ -56,7 +56,7 @@ public class Autor {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String nazwisko;
-    protected long index;
+    protected String index;
 
 	/**
      * Gets the value of the imiê property.
@@ -110,7 +110,7 @@ public class Autor {
      * Gets the value of the index property.
      * 
      */
-    public long getIndex() {
+    public String getIndex() {
         return index;
     }
 
@@ -118,7 +118,7 @@ public class Autor {
      * Sets the value of the index property.
      * 
      */
-    public void setIndex(long value) {
+    public void setIndex(String value) {
         this.index = value;
     }
     	

@@ -38,17 +38,17 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Zbi\u00f3rPlan\u00f3wZaj\u0119\u0107", propOrder = {
-    "nag\u0142\u00f3wek",
-    "listaProwadz\u0105cych",
+    "naglowek",
+    "listaProwadzacych",
     "plan"
 })
 @XmlRootElement(name = "plany")
-public class ZbiórPlanówZajêæ {
+public class ZbiorPlanowZajec {
 
-    @XmlElement(required = true)
-    protected Nag³ówek nag³ówek;
-    @XmlElement(namespace = "http://definicjeProwadzacych.example.com", required = true)
-    protected ListaProwadz¹cych listaProwadz¹cych;
+    @XmlElement(name = "nag\u0142\u00f3wek" ,required = true)
+    protected Naglowek naglowek;
+    @XmlElement(name = "listaProwadz\u0105cych" ,namespace = "http://definicjeProwadzacych.example.com", required = true)
+    protected ListaProwadzacych listaProwadzacych;
     @XmlElement(required = true)
     protected Plan plan;
 
@@ -57,11 +57,11 @@ public class ZbiórPlanówZajêæ {
      * 
      * @return
      *     possible object is
-     *     {@link Nag³ówek }
+     *     {@link Naglowek }
      *     
      */
-    public Nag³ówek getNag³ówek() {
-        return nag³ówek;
+    public Naglowek getNaglowek() {
+        return naglowek;
     }
 
     /**
@@ -69,11 +69,11 @@ public class ZbiórPlanówZajêæ {
      * 
      * @param value
      *     allowed object is
-     *     {@link Nag³ówek }
+     *     {@link Naglowek }
      *     
      */
-    public void setNag³ówek(Nag³ówek value) {
-        this.nag³ówek = value;
+    public void setNaglowek(Naglowek value) {
+        this.naglowek = value;
     }
 
     /**
@@ -81,11 +81,11 @@ public class ZbiórPlanówZajêæ {
      * 
      * @return
      *     possible object is
-     *     {@link ListaProwadz¹cych }
+     *     {@link ListaProwadzacych }
      *     
      */
-    public ListaProwadz¹cych getListaProwadz¹cych() {
-        return listaProwadz¹cych;
+    public ListaProwadzacych getListaProwadzacych() {
+        return listaProwadzacych;
     }
 
     /**
@@ -93,11 +93,11 @@ public class ZbiórPlanówZajêæ {
      * 
      * @param value
      *     allowed object is
-     *     {@link ListaProwadz¹cych }
+     *     {@link ListaProwadzacych }
      *     
      */
-    public void setListaProwadz¹cych(ListaProwadz¹cych value) {
-        this.listaProwadz¹cych = value;
+    public void setListaProwadzacych(ListaProwadzacych value) {
+        this.listaProwadzacych = value;
     }
 
     /**

@@ -64,17 +64,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "przedmiot",
-    "prowadz\u0105cy",
+    "prowadzacy",
     "czas",
     "budynek"
 })
 @XmlRootElement(name = "zaj\u0119cia")
-public class Zajêcia {
+public class Zajecia {
 
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String przedmiot;
-    protected List<Prowadz¹cy> prowadz¹cy;
+    @XmlElement(name = "prowadz\u0105cy")
+    protected List<Prowadzacy> prowadzacy;
     @XmlElement(namespace = "http://czas.example.com")
     protected Czas czas;
     protected Budynek budynek;
@@ -126,15 +127,15 @@ public class Zajêcia {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Prowadz¹cy }
+     * {@link Prowadzacy }
      * 
      * 
      */
-    public List<Prowadz¹cy> getProwadz¹cy() {
-        if (prowadz¹cy == null) {
-            prowadz¹cy = new ArrayList<Prowadz¹cy>();
+    public List<Prowadzacy> getProwadzacy() {
+        if (prowadzacy == null) {
+            prowadzacy = new ArrayList<Prowadzacy>();
         }
-        return this.prowadz¹cy;
+        return this.prowadzacy;
     }
 
     /**

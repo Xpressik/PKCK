@@ -52,15 +52,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "")
+@XmlType(name = "", propOrder = {  
+	    "dzien", 
+	    "miesiac",
+	    "rok"
+})
 @XmlRootElement(name = "data", namespace = "http://czas.example.com")
 public class Data {
 
     @XmlAttribute(name = "dzie\u0144", required = true)
-    protected short dzieñ;
+    protected short dzien;
     @XmlAttribute(name = "miesi\u0105c", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String miesi¹c;
+    protected String miesiac;
     @XmlAttribute(name = "rok", required = true)
     @XmlSchemaType(name = "gYear")
     protected XMLGregorianCalendar rok;
@@ -69,16 +73,16 @@ public class Data {
      * Gets the value of the dzieñ property.
      * 
      */
-    public short getDzieñ() {
-        return dzieñ;
+    public short getDzien() {
+        return dzien;
     }
 
     /**
      * Sets the value of the dzieñ property.
      * 
      */
-    public void setDzieñ(short value) {
-        this.dzieñ = value;
+    public void setDzien(short value) {
+        this.dzien = value;
     }
 
     /**
@@ -89,8 +93,8 @@ public class Data {
      *     {@link String }
      *     
      */
-    public String getMiesi¹c() {
-        return miesi¹c;
+    public String getMiesiac() {
+        return miesiac;
     }
 
     /**
@@ -101,8 +105,8 @@ public class Data {
      *     {@link String }
      *     
      */
-    public void setMiesi¹c(String value) {
-        this.miesi¹c = value;
+    public void setMiesiac(String value) {
+        this.miesiac = value;
     }
 
     /**

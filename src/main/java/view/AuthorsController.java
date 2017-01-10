@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.xml.bind.JAXBException;
 
 import classes.from.xsd.Autor;
-import classes.from.xsd.ZbiórPlanówZajêæ;
+import classes.from.xsd.ZbiorPlanowZajec;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -67,7 +67,7 @@ public class AuthorsController {
 
 		JAXBLogic.readFromXML();
 		tableView.setItems(
-				FXCollections.observableArrayList(JAXBLogic.zbiórPlanówZajêæ.getNag³ówek().getAutorzy().getAutor()));
+				FXCollections.observableArrayList(JAXBLogic.zbiorPlanowZajec.getNaglowek().getAutorzy().getAutor()));
 	}
 
 	@FXML
@@ -88,7 +88,7 @@ public class AuthorsController {
 	public void deleteAuthorBtnOnClick() throws JAXBException, IOException {
 		Autor a;
 		if ((a = tableView.getSelectionModel().getSelectedItem()) != null) {
-			JAXBLogic.zbiórPlanówZajêæ.getNag³ówek().getAutorzy().getAutor().remove(a);
+			JAXBLogic.zbiorPlanowZajec.getNaglowek().getAutorzy().getAutor().remove(a);
 			JAXBLogic.saveToXML();
 			Main.showAuthorsWindow();
 		} else {

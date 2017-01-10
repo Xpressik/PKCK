@@ -4,13 +4,16 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.MarshalException;
 
 import classes.from.xsd.Autor;
-import classes.from.xsd.ZbiórPlanówZajêæ;
+import classes.from.xsd.ZbiorPlanowZajec;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import logic.JAXBLogic;
 import main.Main;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -33,14 +36,14 @@ public class EditAuthorController {
 		surnameTextField.getText();
 		surnameTextField.setText(Main.selectedAuthor.getNazwisko());
 		indeksTextField.getText();
-		indeksTextField.setText(Long.toString(Main.selectedAuthor.getIndex()));
+		indeksTextField.setText(Main.selectedAuthor.getIndex());
 	}
 	
 	@FXML
 	public void saveBtnOnClick() throws JAXBException, IOException {
 		try{
-			Long number =  Long.parseLong(indeksTextField.getText());
-			List<Autor> list = JAXBLogic.zbiórPlanówZajêæ.getNag³ówek().getAutorzy().getAutor();
+			String number = indeksTextField.getText();
+			List<Autor> list = JAXBLogic.zbiorPlanowZajec.getNaglowek().getAutorzy().getAutor();
 			Autor author = new Autor();
 			author.setImiê(nameTextField.getText());
 			author.setNazwisko(surnameTextField.getText());

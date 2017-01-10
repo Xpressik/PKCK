@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
-import classes.from.xsd.DefinicjaProwadz¹cego;
+import classes.from.xsd.DefinicjaProwadzacego;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
@@ -20,24 +20,24 @@ import javafx.scene.control.Button;
 public class TeachersController {
 
 	@FXML
-	TableView<DefinicjaProwadz¹cego> table;
+	TableView<DefinicjaProwadzacego> table;
 	@FXML
-	TableColumn<DefinicjaProwadz¹cego, String> titleColumn;
+	TableColumn<DefinicjaProwadzacego, String> titleColumn;
 	@FXML
-	TableColumn<DefinicjaProwadz¹cego, String> nameColumn;
+	TableColumn<DefinicjaProwadzacego, String> nameColumn;
 	@FXML
-	TableColumn<DefinicjaProwadz¹cego, String> surnameColumn;
+	TableColumn<DefinicjaProwadzacego, String> surnameColumn;
 	@FXML
-	TableColumn<DefinicjaProwadz¹cego, String> idColumn;
+	TableColumn<DefinicjaProwadzacego, String> idColumn;
 	@FXML
 	Button backBtn;
 
 	@FXML
 	void initialize() throws JAXBException {
-		titleColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Stopieñ"));
-		nameColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Imiê"));
-		surnameColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Nazwisko"));
-		idColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadz¹cego, String>("Identyfikator"));
+		titleColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadzacego, String>("Stopien"));
+		nameColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadzacego, String>("Imie"));
+		surnameColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadzacego, String>("Nazwisko"));
+		idColumn.setCellValueFactory(new PropertyValueFactory<DefinicjaProwadzacego, String>("Identyfikator"));
 		table.setItems(null);
 		try {
 			refreshList();
@@ -58,6 +58,6 @@ public class TeachersController {
 	public void refreshList() throws JAXBException, FileNotFoundException {
 		JAXBLogic.readFromXML();
 		table.setItems(FXCollections
-				.observableArrayList(JAXBLogic.zbiórPlanówZajêæ.getListaProwadz¹cych().getDefinicjaProwadz¹cego()));
+				.observableArrayList(JAXBLogic.zbiorPlanowZajec.getListaProwadzacych().getDefinicjaProwadzacego()));
 	}
 }

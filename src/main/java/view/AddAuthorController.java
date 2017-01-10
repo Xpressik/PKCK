@@ -38,15 +38,14 @@ public class AddAuthorController {
 			Autor autor = new Autor();
 			autor.setImiê(imieTextField.getText());
 			autor.setNazwisko(nazwiskoTextField.getText());
-			autor.setIndex(Long.parseLong(indeksTextField.getText()));
-			JAXBLogic.zbiórPlanówZajêæ.getNag³ówek().getAutorzy().getAutor().add(autor);
+			autor.setIndex(indeksTextField.getText());
+			JAXBLogic.zbiorPlanowZajec.getNaglowek().getAutorzy().getAutor().add(autor);
 			JAXBLogic.saveToXML();
 			backBtnOnClick();
 		}
 		else{
 			errorLbl.setVisible(true);
 		}
-			
 	}
 
 	@FXML

@@ -46,7 +46,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "definicjaProwadz\u0105cego", namespace = "http://definicjeProwadzacych.example.com")
-public class DefinicjaProwadz¹cego {
+public class DefinicjaProwadzacego {
 
     @XmlAttribute(name = "identyfikator", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -55,11 +55,11 @@ public class DefinicjaProwadz¹cego {
     @XmlAttribute(name = "stopie\u0144")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
-    protected String stopieñ;
+    protected String stopien;
     @XmlAttribute(name = "imi\u0119", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
-    protected String imiê;
+    protected String imie;
     @XmlAttribute(name = "nazwisko", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NMTOKEN")
@@ -97,8 +97,8 @@ public class DefinicjaProwadz¹cego {
      *     {@link String }
      *     
      */
-    public String getStopieñ() {
-        return stopieñ;
+    public String getStopien() {
+        return stopien;
     }
 
     /**
@@ -109,8 +109,8 @@ public class DefinicjaProwadz¹cego {
      *     {@link String }
      *     
      */
-    public void setStopieñ(String value) {
-        this.stopieñ = value;
+    public void setStopien(String value) {
+        this.stopien = value;
     }
 
     /**
@@ -121,8 +121,8 @@ public class DefinicjaProwadz¹cego {
      *     {@link String }
      *     
      */
-    public String getImiê() {
-        return imiê;
+    public String getImie() {
+        return imie;
     }
 
     /**
@@ -133,8 +133,8 @@ public class DefinicjaProwadz¹cego {
      *     {@link String }
      *     
      */
-    public void setImiê(String value) {
-        this.imiê = value;
+    public void setImie(String value) {
+        this.imie = value;
     }
 
     /**

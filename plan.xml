@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<plany xmlns:ns2="http://czas.example.com" xmlns:ns3="http://definicjeProwadzacych.example.com">
+<plany xmlns:ns2="http://czas.example.com" xmlns:ns3="http://definicjeProwadzacych.example.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="plan.xsd">
     <nagłówek>
         <autorzy>
             <autor>
